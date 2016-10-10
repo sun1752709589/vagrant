@@ -2,3 +2,4 @@
 /docker/.vagrant
 /ubuntu1604/.vagrant
 /ubuntu1604/*.log
+/ubuntu-dev/.vagrant
