@@ -4,13 +4,12 @@ Vagrant.configure("2") do |config|
   config.ssh.insert_key = false
 
   config.vm.synced_folder "./", "/vagrant", disabled: true
-  config.vm.synced_folder "~/sun", "/sun", type: "nfs", mount_options: ["nolock", "vers=3", "udp", "noatime", "actimeo=1"]
+  # config.vm.synced_folder "~/sun", "/sun", type: "nfs", mount_options: ["nolock", "vers=3", "udp", "noatime", "actimeo=1"]
   config.vm.box = "ubuntu1604"
   config.vm.network "private_network", ip: "172.28.128.5"
   config.vm.provider "virtualbox" do |vb|
     vb.gui = false
-    vb.memory = "600"
+    vb.memory = "500"
     vb.cpus = 2
-    # vb.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold", 1000 ]
   end
 end
